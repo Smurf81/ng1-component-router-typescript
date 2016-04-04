@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <base href="/">
+        <script src="node_modules/systemjs/dist/system.js"></script>
+        <script src="node_modules/typescript/lib/typescript.js"></script>
+        <script>
+            System.config({
+                baseURL: '/',
+               packages:{
+                   app:{
+                       defaultExtension: 'ts'
+                   }
+               },
+               meta:{
+                   'node_modules/@angular/router/angular1/angular_1_router.js':{
+                       format:'global',
+                       deps:[
+                           'angular'
+                       ]
+                   }
+               },
+               map:{
+                   'angular':'node_modules/angular/angular.js',
+                   'angular-route':'node_modules/@angular/router/angular1/angular_1_router.js'
+               },
+               transpiler: "typescript"
+            });
+            System.import('app/bootstrap')
+                .then(function(){
+                    angular.bootstrap(document, ['app']);
+                });
+          </script>
+     </head>
+     <body>
+         <component hello="pouet"></component>
+     </body>
+</html>

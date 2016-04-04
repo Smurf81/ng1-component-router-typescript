@@ -1,0 +1,32 @@
+{
+  "name": "hackersnews",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "angular": "1.5.2",
+    "systemjs": "0.19.6"
+  },
+  "devDependencies": {
+    "angular-route": "^1.5.3",
+    "concurrently": "^2.0.0",
+    "es6-module-loader": "^0.17.11",
+    "jquery": "^2.2.2",
+    "lite-server": "^2.1.0",
+    "ng-annotate": "^1.2.1",
+    "plugin-typescript": "^4.0.1",
+    "traceur": "0.0.105",
+    "typescript": "^1.8.9",
+    "typings": "^0.7.9"
+  }
+}
